@@ -37,3 +37,15 @@ function isPalindrome($text)
     return isPalindrome(substr($text, 1, strlen($text) - 2));
 }
 // END
+// BEGIN
+function isPalindrome(string $word)
+{
+    $lastIndex = strlen($word) - 1;
+    for ($i = 0; $i < ceil($lastIndex / 2); $i++) {
+        if ($word[$i] !== $word[$lastIndex - $i]) {
+            return false;
+        }
+    }
+    return true;
+}
+// END
