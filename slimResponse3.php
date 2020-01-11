@@ -23,6 +23,7 @@ $companies = [
  */
 
 use Slim\Factory\AppFactory;
+use Funct\Collection;
 
 require '/composer/vendor/autoload.php';
 
