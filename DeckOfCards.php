@@ -42,7 +42,7 @@ class DeckOfCards
         $size = $collection->count() + 3;
         
         $result = $collection->pad($size, $collection)->flatten()->shuffle()->all();
-       
+
         return $result;
     }
 }
@@ -56,10 +56,10 @@ class DeckOfCards
     public function __construct(array $types)
     {
         $this->cards = collect($types)
-             ->map(function ($card) {
-                 return array_fill(0, 4, $card);
-             })
-             ->flatten();
+                ->map(function ($card) {
+                return array_fill(0, 4, $card);
+            })
+            ->flatten();
     }
 
     public function getShuffled(): array
